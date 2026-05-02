@@ -59,7 +59,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    background: #111;
+    background: #333;
     color: white;
 }
 
@@ -79,7 +79,6 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Each section */
 /* Each section */
 .panel {
     width: 100vw;
@@ -105,8 +104,6 @@ body {
     position: relative;
 }
 
-/* arrow button */
-/* arrow button */
 /* arrow button */
 .arrow {
     position: fixed;

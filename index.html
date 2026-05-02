@@ -5,9 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment 2</title>
 
-    <!-- CSS link FIXED (must be inside head) -->
+    
     <link rel="stylesheet" href="style.css">
 </head>
+<script>
+function goTo(id) {
+    document.getElementById(id).scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "start"
+    });
+}
+</script>
 
 <body>
 
@@ -25,14 +34,15 @@
 
     <!-- HORIZONTAL SCROLL SECTIONS -->
     <div class="container">
-        <section class="panel">
+        <section class="panel" id="sec1">
             <h1>Difference between a Web Application and a Website</h1>
             <p>A website is a collection of static or dynamic web pages that provide information to users, while a web application is an interactive platform that allows users to perform specific tasks or functions online.</p>
+            <button class="arrow" onclick="goTo('sec2')">↓</button>
         </section>
 
-        <section class="panel">
+        <section class="panel" id="sec2">
             <h1>Parts of a URL</h1>
-            <p>Understanding the HTTP Request-Response cycle is fundamental to how the internet functions. Here is a professional breakdown of the six core stages:
+            <p>Understanding the parts of a URL is essential for navigating the web effectively. Here are the main components:
 
 User Input: The process begins when a user enters a Uniform Resource Locator (URL) into the browser’s address bar or clicks a link.
 
@@ -45,9 +55,11 @@ Server-Side Processing: The web server receives the request and processes it, wh
 HTTP Response: After processing, the server generates and sends an HTTP response back to the browser, typically containing a status code (like 200 OK) and the requested resource.
 
 Client-Side Rendering: Finally, the browser parses the response data—such as HTML, CSS, and JavaScript—and renders the visual content for the user to interact with.</p>
+            <button class="arrow back" onclick="goTo('sec1')">↑</button>
+            <button class="arrow" onclick="goTo('sec3')">↓</button>
         </section>
 
-        <section class="panel">
+        <section class="panel" id="sec3">
             <h1>HTTP Response cycle</h1>
             <p>User Input: The process begins when a user enters a Uniform Resource Locator (URL) into the browser’s address bar or clicks a link.
 
@@ -60,6 +72,7 @@ Server-Side Processing: The web server receives the request and processes it, wh
 HTTP Response: After processing, the server generates and sends an HTTP response back to the browser, typically containing a status code (like 200 OK) and the requested resource.
 
 Client-Side Rendering: Finally, the browser parses the response data—such as HTML, CSS, and JavaScript—and renders the visual content for the user to interact with.</p>
+            <button class="arrow back" onclick="goTo('sec2')">↑</button>
         </section>
     </div>
 
